@@ -17,7 +17,7 @@ def get_canary():
                 io.recv()
                 canary += byte
                 break
-            except:
+            except EOFError:
                 pass
             finally:
                 io.close()
